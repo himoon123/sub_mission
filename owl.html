@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/script.js" defer type="text/javascript"></script>
+    <script src="javascript/jquery-2.2.4.min.js"></script>
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="top">
+                <div class="logo">
+                    <a href="nam_index.html"><img src="images/logo.png" alt="로고 이미지"></a>
+                </div>
+                <nav class="menu">
+                    <ul class="navi">
+                        <li>
+                            <a href="tubular.html">회사소개</a>
+                            <ul class="submenu">
+                                <li><a href="#">인사말</a></li>
+                                <li><a href="#">조직도</a></li>
+                                <li><a href="#">오시는길</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                        <a href="gallery_parallax.html">사업영역</a>
+                        <ul class="submenu">
+                            <li><a href="#">주택사업</a></li>
+                            <li><a href="#">건축사업</a></li>
+                            <li><a href="#">토목사업</a></li>
+                        </ul>
+                        </li>
+                        <li>
+                            <a href="#">입주정보</a>
+                            <ul class="submenu">
+                                <li><a href="#">입주단지</a></li>
+                                <li><a href="#">입주캘린더</a></li>
+                                <li><a href="#">입주모임</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">인재채용</a>
+                            <ul class="submenu">
+                                <li><a href="#">직무소개</a></li>
+                                <li><a href="#">채용공고</a></li>
+                                <li><a href="#">회원가입</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="wrapper">
+            <p class="owl_main">현장 이미지 갤러리
+            </p>
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="images/owl1.jpg" width="500px" height="300px" alt="이미지1">
+                </div>
+                <div class="item">
+                    <img src="images/owl2.jpg" width="500px" height="300px" alt="이미지2">
+                </div>
+                <div class="item">
+                    <img src="images/owl3.jpg" width="500px" height="300px" alt="이미지3">
+                </div>
+                <div class="item">
+                    <img src="images/owl4.jpg" width="500px" height="300px" alt="이미지4">
+                </div>
+                <div class="item">
+                    <img src="images/owl5.jpg" width="500px" height="300px" alt="이미지5">
+                </div>
+            </div>
+        </div>
+        <div id="wrapper">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="images/owl6.jpg" width="500px" height="300px" alt="이미지1">
+                </div>
+                <div class="item">
+                    <img src="images/owl7.jpg" width="500px" height="300px" alt="이미지2">
+                </div>
+                <div class="item">
+                    <img src="images/owl8.jpg" width="500px" height="300px" alt="이미지3">
+                </div>
+                <div class="item">
+                    <img src="images/owl9.jpg" width="500px" height="300px" alt="이미지4">
+                </div>
+                <div class="item">
+                    <img src="images/owl10.jpg" width="500px" height="300px" alt="이미지5">
+                </div>
+            </div>
+        </div>
+        <script src="javascript/jquery-2.2.4.min.js"></script>
+        <script src="javascript/owl.carousel.js"></script>
+        <script src="javascript/owl.autoplay.js"></script>
+        <script src="javascript/owl.navigation.js"></script>
+        <script>
+            var owl = $('.owl-carousel');
+                owl.owlCarousel({
+                    items:3,
+                    loop: true,  
+                    margin: 10,  
+                    autoplay: true, 
+                    autoplayTimeout: 4000,  
+                    autoplayHoverPause: true 
+                });
+        </script>
+
+        <footer>
+            <div class="copy">COPYRIGHT © by WEBDESIGN. ALL RIGHTS RESERVED</div>
+            <div class="site">
+              <div class="btmenu">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><img
+                        src="images/worker_job-1.svg"
+                        width="40px"
+                        height="40px"
+                        alt="아이콘1"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img
+                        src="images/worker_job-2.svg"
+                        width="40px"
+                        height="40px"
+                        alt="아이콘2"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img
+                        src="images/worker_job-3.svg"
+                        width="40px"
+                        height="40px"
+                        alt="아이콘3"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="familysite">
+                <select name="sitelist">
+                  <option value="#">YOUTUBE</option>
+                  <option value="#">SNS</option>
+                  <option value="#">BLOG</option>
+                </select>
+              </div>
+            </div>
+          </footer>
+</body>
+</html>

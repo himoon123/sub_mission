@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>남율건설</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  </head>
+  <div class="wrapper">
+    <header>
+        <div class="top">
+            <div class="logo">
+                <a href="nam_index.html"><img src="images/logo.png" alt="로고 이미지"></a>
+            </div>
+            <nav class="menu">
+                <ul class="navi">
+                    <li>
+                        <a href="tubular.html">회사소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">조직도</a></li>
+                            <li><a href="location.html">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    <a href="gallery_parallax.html">사업영역</a>
+                    <ul class="submenu">
+                        <li><a href="#">주택사업</a></li>
+                        <li><a href="#">건축사업</a></li>
+                        <li><a href="#">토목사업</a></li>
+                    </ul>
+                    </li>
+                    <li>
+                        <a href="#">입주정보</a>
+                        <ul class="submenu">
+                            <li><a href="#">입주단지</a></li>
+                            <li><a href="#">입주캘린더</a></li>
+                            <li><a href="#">입주모임</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">인재채용</a>
+                        <ul class="submenu">
+                            <li><a href="#">직무소개</a></li>
+                            <li><a href="#">채용공고</a></li>
+                            <li><a href="signup.html">회원가입</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+  <hr />
+  <body>
+    <!-- 지도 -->
+    <div class="otherwrap">
+      <div class="banner">
+        <br />
+        <p class="nam"><strong> 남율건설 </strong></p> <br>
+         <p> 찾아오시는길 </p>
+        <br />
+
+        <div
+          id="map"
+          class="info"
+          style="
+            width: auto;
+            height: 500px;
+            margin-top: 20px;
+            margin-left: 80px;
+            margin-right: 80px;
+            margin-bottom: 30px;
+          "
+        ></div>
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b781666cb281a3999a9487eb65f7f86b"
+    ></script>
+    <script>
+      // 지도 api
+      var mapContainer = document.getElementById("map"), 
+        mapOption = {
+          center: new kakao.maps.LatLng(37.578532, 126.987276),
+          level: 3, 
+        };
+      var map = new kakao.maps.Map(mapContainer, mapOption);
+
+      var markerPosition = new kakao.maps.LatLng(37.578532, 126.987276);
+      var marker = new kakao.maps.Marker({
+        position: markerPosition,
+      });
+      marker.setMap(map);
+      var iwContent =
+          '<div style="padding:5px, text-allign:center;">  남율건설 <br><a href="https://map.kakao.com/link/map/남율건설,37.578532, 126.987276" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/남율건설,37.578532, 126.987276" style="color:blue" target="_blank">길찾기</a></div>', 
+        iwPosition = new kakao.maps.LatLng(37.578532, 126.987276); 
+
+        var infowindow = new kakao.maps.InfoWindow({
+        position: iwPosition,
+        content: iwContent,
+      });
+
+      infowindow.open(map, marker);
+    </script>
+
+<footer>
+  <div class="copy">
+      COPYRIGHT ©	by WEBDESIGN. ALL RIGHTS RESERVED
+  </div>
+  <div class="site">
+      <div class="btmenu">
+          <ul>
+              <li><a><img src="images/worker_job-1.svg" alt="건설1" width="40px" height="40px"></a></li>
+              <li><a><img src="images/worker_job-2.svg" alt="건설2" width="40px" height="40px"></a></li>
+              <li><a><img src="images/worker_job-3.svg" alt="건설3" width="40px" height="40px"></a></li>
+          </ul>
+      </div>
+      <div class="familysite">
+          <select name="sitelist">
+              <option value="#">YOUTUBE</option>
+              <option value="#">SNS</option>
+              <option value="#">NAVER BLOG</option>
+          </select>
+      </div>
+  </div>
+</footer>
+  </body>
+</html>

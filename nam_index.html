@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>남율건설</title>
+    <!-- 1) 스타일시트 제일 첫줄 폰트 적용 -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/jquery.bxslider.min.css" />
+    <link rel="stylesheet" href="css/vegas.min.css" />
+    <link rel="stylesheet" href="css/vg.css" />
+    <script src="javascript/jquery-1.12.3.js"></script>
+    <script src="javascript/script.js" defer type="text/javascript"></script>
+    <script src="javascript/jquery-2.2.4.min.js"></script>
+    <script src="javascript/jquery.cookie.js"></script>
+    <script src="javascript/jquery.bxslider.min.js"></script>
+    <script src="javascript/vegas.min.js"></script>
+    <script>
+      // 3) 쿠키 적용
+      $(function () {
+        if ($.cookie("popup") == "none") {
+          $("#notice_wrap").hide();
+        }
+        var $expiresChk = $("#expiresChk");
+        $(".closeBtn").on("click", closePop);
+        function closePop() {
+          if ($expiresChk.is(":checked")) {
+            $.cookie("popup", "none", { expires: 3, path: "/" });
+          }
+          $("#notice_wrap").fadeOut("fast");
+        }
+      });
+
+
+      // 6) vagas 적용
+      $(document).ready(function () {
+        $(".shortcut").vegas({
+          slides: [
+            { src: "images/vagas1.jpg" },
+            { src: "images/vagas2.jpg" },
+            {
+              video: {
+                src: [
+                  "images/vagas.mp4",
+                ],
+                loop: true,
+                mute: true,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+  </head>
+  <body>
+    
+    <!-- 쿠키 -->
+    <div id="notice_wrap">
+      <img
+        src="images/notice.jpg"
+        alt="공지사항이미지"
+        width="300px"
+        height="300px"
+      />
+      <p class="closewrap">
+        <input type="checkbox" name="expiresChk" id="expiresChk" />
+        <label for="expiresChk">3일 동안 이 창 열지 않기</label>
+        <button class="closeBtn">닫기</button>
+      </p>
+    </div>
+
+    <!-- 공지사항 -->
+    <div id="modal">
+      <div class="modal_up">
+        <div class="uptitle">상반기 신입/경력 사원 채용 공고</div>
+        <div class="upbody">
+          국내 최고의 건설회사로 발돋움하고 있는 남율건설에서는 열정을 가지고
+          진취적으로 도전하는 신입/경력 사원을 모집합니다. 남율건설과 함께 하실
+          역량있는 인재들의 많은 지원을 기다립니다.
+        </div>
+        <div class="btn">닫기</div>
+      </div>
+    </div>
+
+    <!-- 헤더 -->
+    <div class="wrapper">
+      <header>
+        <div class="top">
+          <div class="logo">
+            <a href="nam_index.html"><img src="images/logo.png" alt="로고 이미지" /></a>
+          </div>
+          <nav class="menu">
+            <ul class="navi">
+              <li>
+                <!-- 7) tubula 적용 -->
+                <a href="tubular.html">회사소개</a>
+                <ul class="submenu">
+                  <li><a href="#">인사말</a></li>
+                  <li><a href="#">조직도</a></li>
+                  <!-- 9) 회사 찾아오시는길 -->
+                  <li><a href="location.html">오시는길</a></li>
+                </ul>
+              </li>
+              <li>
+                <!-- 5) 패럴랙스 적용 -->
+                <a href="gallery_parallax.html">사업영역</a>
+                <ul class="submenu">
+                  <li><a href="#">주택사업</a></li>
+                  <li><a href="#">건축사업</a></li>
+                  <li><a href="#">토목산업</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">입주정보</a>
+                <ul class="submenu">
+                  <li><a href="#">입주단지</a></li>
+                  <li><a href="#">입주캘린더</a></li>
+                  <li><a href="#">입주모임</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">인재채용</a>
+                <ul class="submenu">
+                  <li><a href="#">직무소개</a></li>
+                  <li><a href="#">채용공고</a></li>
+                  <!-- 8) 회원가입 기능 추가 -->
+                  <li><a href="signup.html">회원가입</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- 메인 슬라이드 -->
+      <div class="bodywrap">
+        <div class="imgslide">
+          <a href="#">
+              <img src="images/img1.jpg" alt="이미지 1">
+              <span class="imgtext">모델하우스 VR 체험</span>
+          </a>
+          <a href="#">
+              <img src="images/img2.jpg" alt="이미지 2">
+              <span class="imgtext">건축과 인테리어</span>
+          </a>
+          <a href="#">
+              <img src="images/img3.jpg" alt="이미지 3">
+              <span class="imgtext">남율건설 인재 채용</span>
+          </a>
+      </div>
+        <div class="contents">
+          <div class="notice">
+            <div class="tab">
+              <h4>공지사항</h4>
+            </div>
+            <ul>
+              <li>
+                <a href="#" class="noti">
+                  상반기 신입/경력 사원 채용 공고
+                  <span>2022.05.10</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="noti">
+                  건설의 날 기념 행사를 안내해 드립니다.
+                  <span>2022.05.11</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="noti">
+                  대학생 대상 건설현장 탐방기
+                  <span>2022.05.12</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="noti">
+                  남율건설, 시공평가 순위 상위 5위 달성
+                  <span>2022.05.13</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 갤러리 -->
+          <div class="gallery">
+            <div class="tab">
+              <h4>갤러리</h4>
+            </div>
+            <ul>
+              <li>
+                <!-- 4) owl 적용 -->
+                <a href="owl.html"
+                  ><img src="images/icon1.jpg" alt="갤러리이미지1"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="images/icon2.jpg" alt="갤러리이미지2"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="images/icon3.jpg" alt="갤러리이미지3"
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="shortcut">
+            <a href="#"> </a>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="copy">COPYRIGHT © by WEBDESIGN. ALL RIGHTS RESERVED</div>
+        <div class="site">
+          <div class="btmenu">
+            <ul>
+              <li>
+                <!-- 2) SVG 이미지 적용 -->
+                <a href="#"
+                  ><img
+                    src="images/worker_job-1.svg"
+                    width="40px"
+                    height="40px"
+                    alt="아이콘1"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="images/worker_job-2.svg"
+                    width="40px"
+                    height="40px"
+                    alt="아이콘2"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="images/worker_job-3.svg"
+                    width="40px"
+                    height="40px"
+                    alt="아이콘3"
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="familysite">
+            <select name="sitelist">
+              <option value="https://www.youtube.com/">YOUTUBE</option>
+              <option value="#">SNS</option>
+              <option value="http://blog.naver.com">BLOG</option>
+            </select>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
